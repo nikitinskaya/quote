@@ -8,6 +8,13 @@
   font-weight: 100;
 }
 
+@media (max-width: 768px) {
+  * {
+    font-weight: 400;
+    font-size: 20px;
+  }
+}
+
 .main {
   width: 550px;
   margin: 10% auto auto auto;
@@ -57,3 +64,4 @@
   position: relative;
   right: 15px;
 }
+
