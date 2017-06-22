@@ -34,14 +34,13 @@ $(document).ready(function() {
 });
 
 var colors = [
-  "#c5d5c5", //green
-  "#9fa9a3", //grey
-  "#e3e0cc", //beige
-  "#c0ded9", //mint
-  "#e4d1d1", //pink
-  "#d9ecd0", //pink2
-  "#c2d4dd", //blue
-  "#b0aac0" //purple
+  "#997777",
+  "#838a85",
+  "#8c7884",
+  "#779970",
+  "#9fb1a2",
+  "#748f8b",
+  "#6d9cb3"
 ];
 
 function changeColor() {
