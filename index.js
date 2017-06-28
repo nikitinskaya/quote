@@ -1,3 +1,23 @@
+$(document).ready(function() {
+  newQuote();
+  bindClick();
+});
+
+function bindClick() {
+  $('#getQuote').on("click", newQuote);
+  //if not in function, won't work outside document.ready cause 
+  //.ready handler is async, it gets passed a callback and first
+  //logs the fact that DOM is ready, so if we place a click event inside,
+  //it will be executed right after the ready handler,
+  //and not when the callback is executed.
+  //TODO: get an idea of how this actually works
+};
+
+function newQuote() {
+  getQuote();
+  changeColor();
+};
+
 function getQuote() {
   $.ajax({
     url: "https://api.forismatic.com/api/1.0/?",
@@ -38,11 +58,3 @@ function changeColor() {
   $(".decorate").css("color", colors[color]);
   $(".decorate").css("border-color", colors[color]);
 };
-
-function newQuote() {
-  getQuote();
-  changeColor();
-};
-
-$(document).ready(newQuote);
-$("#getQuote").on("click", newQuote);
