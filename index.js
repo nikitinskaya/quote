@@ -1,17 +1,7 @@
 $(document).ready(function() {
   newQuote();
-  bindClick();
-});
-
-function bindClick() {
   $('#getQuote').on("click", newQuote);
-  //if not in function, won't work outside document.ready cause 
-  //.ready handler is async, it gets passed a callback and first
-  //logs the fact that DOM is ready, so if we place a click event inside,
-  //it will be executed right after the ready handler,
-  //and not when the callback is executed.
-  //TODO: get an idea of how this actually works
-};
+});
 
 function newQuote() {
   getQuote();
